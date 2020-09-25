@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-## Including Plots
+## Lombardy map  with Leaflet
 
 
 
@@ -24,16 +24,6 @@ leaflet() %>%
   addMarkers(clusterOptions = markerClusterOptions())
 ```
 
-## Including Plots
-
-```{r pressure, echo=FALSE}
-library(leaflet)
-df<-data.frame(lat=c(45.4642,45.6983,45.3097,45.5416),long=c(9.19,9.6773,9.5037,10.2118))
-df %>%
-leaflet() %>%
-  addTiles() %>%
-  addMarkers(clusterOptions = markerClusterOptions())
-```
 
 
 
