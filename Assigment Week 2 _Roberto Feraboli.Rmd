@@ -1,0 +1,40 @@
+---
+title: 'Assignment: R Markdown and Leaflet'
+author: "Roberto Feraboli"
+date: "25/9/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+## Including Plots
+
+
+
+```{r pressure, echo=FALSE}
+library(leaflet)
+df<-data.frame(lat=c(45.4642,45.5328,45.6983,45.3097,45.5416,45.5845),long=c(9.19,9.2257,9.6773,9.5037,10.2118,9.2744))
+df %>%
+leaflet() %>%
+  addTiles() %>%
+  addMarkers(clusterOptions = markerClusterOptions())
+```
+
+## Including Plots
+
+```{r pressure, echo=FALSE}
+library(leaflet)
+df<-data.frame(lat=c(45.4642,45.6983,45.3097,45.5416),long=c(9.19,9.6773,9.5037,10.2118))
+df %>%
+leaflet() %>%
+  addTiles() %>%
+  addMarkers(clusterOptions = markerClusterOptions())
+```
+
+
+
+
